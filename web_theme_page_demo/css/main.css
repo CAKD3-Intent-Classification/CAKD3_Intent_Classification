@@ -1,0 +1,416 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 22px;
+}
+
+.main_box {
+  width: 1440px;
+  height: 1024px;
+  position: absolute;
+
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.sub_box {
+  width: 1410px;
+  height: 990px;
+  
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  overflow: hidden;
+}
+
+.content_box {
+  width: 100%;
+  height: 927px;
+  
+  
+  position: absolute;
+  top: 63px;
+  left: 0px;
+  border: 1px solid rgba(78,109,179,1);
+  overflow: hidden;
+}
+
+.bert_box {
+  width: 721px;
+  height: 425px;
+  
+  position: absolute;
+  top: 502px;
+  left: 690px;
+  overflow: hidden;
+}
+
+.bert_input_box {
+  width: 721px;
+  height: 64px;
+  position: absolute;
+  top: 361px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.bert_text_box {
+  width: 704px;
+  height: 46px;
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  overflow: hidden;
+}
+
+
+.enter_btn {
+  width: 79px;
+  height: 46px;
+  position: absolute;
+  top: 0px;
+  left: 625px;
+  overflow: hidden;
+}
+
+#enter_btn {
+  width: 79px;
+  height: 46px;
+  background: rgba(211,224,242,1);
+}
+
+.input_text {
+  width: 613px;
+  height: 46px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: 1px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+
+#input_text {
+  width: 607px;
+  height: 40px;}
+
+.print_box {
+  width: 704px;
+  height: 348px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  border: 1px solid rgba(0,0,0,1);
+  overflow-y: scroll;
+}
+
+
+.print_area {
+  width: 721px;
+  height: 361px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+
+.keyword_box {
+  width: 721px;
+  height: 264px;
+  position: absolute;
+  top: 237px;
+  left: 690px;
+  overflow: hidden;
+}
+
+.bad_top_area {
+  width: 364px;
+  height: 264px;
+  position: absolute;
+  top: 0px;
+  left: 357px;
+  overflow: hidden;
+}
+.top_box {
+  width: 344px;
+  height: 254px;
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  border: 1px solid rgba(0,0,0,1);
+  border-radius: 37px;
+  overflow: hidden;
+  text-align: center;
+  font-weight: bold;
+}
+
+.top_title {
+  height: 33px;
+  position: absolute;
+  top: 20px;
+  left: 15%;
+  overflow: hidden;
+  line-height: 33px;
+}
+
+.top3 {
+  width: 243px;
+  height: 150px;  
+  position: absolute;
+  top: 70px;
+  left: 50px;
+  margin-top: 0px;
+  line-height: 160%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.good_top_area {
+  width: 357px;
+  height: 264px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.placelist_box {
+  width: 721px;
+  height: 237px;
+  position: absolute;
+  top: 0px;
+  left: 690px;
+  overflow: hidden;
+}
+
+.placelist_area {
+  width: 701px;
+  height: 195px;
+  position: absolute;
+  top: 39px;
+  left: 7px;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+.ul_style {
+  list-style-type: disc
+}
+
+ul.ul_style li {
+  color: white;
+  padding: 2px;
+  margin: 2px;
+  margin: auto;
+  width: 250px;
+  display: inline-block ; 
+  max-width: 721px; 
+  max-height: 237px;
+  text-align: left;
+}
+
+ul.ul_style li :hover {
+  background: white;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 19px;  
+}
+
+.placelist_title {
+  width: 690px;
+  height: 34px;
+  position: absolute;
+  top: 5px;
+  left: 16px;
+  overflow: hidden;
+  text-align: left;
+  text-size-adjust: 12px;
+}
+
+
+
+.graph_box {
+  width: 690px;
+  height: 425px;
+  position: absolute;
+  top: 501px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.graph_area {
+  width: 668px;
+  height: 406px;
+  position: absolute;
+  top: 9px;
+  left: 11px;
+  overflow: hidden;
+
+}
+
+div.graph_area img {
+  width: 668px;
+  height: 406px;}
+
+.map_box {
+  width: 690px;
+  height: 501px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.map_img {
+  width: 674px;
+  height: 485px;
+  position: absolute;
+  top: 10px;
+  left: 7px;
+  overflow: hidden;
+}
+
+div.map_img img {
+  width: 670px;
+  height: 481px;
+  top:0px;
+  left: 0px;
+}
+
+.point_circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 75px;
+  background: red;
+  border: 1px solid black;
+}
+
+div.point_circle:hover {
+  width: 20px;
+  height: 20px;
+}
+
+
+.menubar_box {
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  overflow: hidden;
+  background: rgba(211,224,242,1);
+  font-weight: bold;
+}
+
+.clickable_box {
+  width: 118px;
+  height: 38px;
+  position: absolute;
+  top: 7px;
+  left: 29px;
+  border-radius: 19px;
+  overflow: hidden;
+
+  line-height: 38px;
+}
+
+.menu_box1 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.menu_box2 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 176px;
+  overflow: hidden;
+}
+
+.menu_box3 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 352px;
+  overflow: hidden;
+}
+
+.menu_box4 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 528px;
+  overflow: hidden;
+}
+
+.menu_box5 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 704px;
+  overflow: hidden;
+}
+
+.menu_box6 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 880px;
+  overflow: hidden;
+}
+
+.menu_box7 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 1056px;
+  overflow: hidden;
+}
+
+.menu_box8 {
+  width: 176px;
+  height: 52px;
+  position: absolute;
+  top: 0px;
+  left: 1232px;
+  overflow: hidden;
+}
+
+#box_style_deep {
+  background: rgba(78,109,179,1);
+  border: 1px solid rgba(211,224,242,1);
+}
+
+#box_style_light {
+  background: rgba(211,224,242,1);
+  border: 2px solid rgba(78,109,179,1);
+}
+
+#bert_box_style {
+  border: 5px solid rgba(211,224,242,1);
+}
+
+div.clickable_box:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  background: rgba(78,109,179,0.28);
+}
+
