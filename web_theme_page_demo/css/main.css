@@ -43,8 +43,8 @@ body {
   height: 425px;
   
   position: absolute;
-  top: 502px;
-  left: 690px;
+  bottom: 0px;
+  right: 0px;
   overflow: hidden;
 }
 
@@ -184,6 +184,7 @@ body {
   top: 0px;
   left: 690px;
   overflow: hidden;
+  
 }
 
 .placelist_area {
@@ -298,6 +299,22 @@ div.point_circle:hover {
   height: 20px;
 }
 
+.point_circle_sub {
+  width: 15px;
+  height: 15px;
+  border-radius: 75px;
+  background: rgba(231,152,141,0.94);
+  border: 1px solid black;
+}
+
+div.point_circle_sub:hover {
+  width: 20px;
+  height: 20px;
+}
+
+.clicked {
+  background: red;
+}
 
 .menubar_box {
   width: 100%;
@@ -414,3 +431,44 @@ div.clickable_box:hover {
   background: rgba(78,109,179,0.28);
 }
 
+.wordcloud_area {
+  width: 281px;
+  height: 264px;
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  overflow: hidden;
+}
+
+
+div.wordcloud_area img {
+  width: 281px;
+  height: 191px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.review_keyword {
+  height: 45px; 
+  width: 273px; 
+  position: absolute; 
+  top: 201px; 
+  left: 4px;
+  text-align: center;
+  background: rgba(229,229,229,1);
+  line-height: 45px;
+}
+
+.solution_area {
+  width: 415px;
+  height: 245px;
+  position: absolute;
+  top: 5px;
+  left: 294px;
+  background: rgba(211,224,242,1);
+  border: 3px solid rgba(78,109,179,1);
+  text-align: left;
+  padding: 5px;
+  line-height: normal;
+}
