@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+<html>
+{% block title %}{{ object.theme_name }}{% endblock %}
+
+        
+
+ 
+                    {% block contents %}                    
+                    <div class="map_box">
+                        <div class="map_img">
+                            <img src ="{{ object.map_img.url }}"/>
+                            
+                            {% for place in object.place_set.all %}
+
+                            <div onclick="location.href='{{ place.get_absolute_url }}';" class='point_circle' style='position:absolute; top: {{place.points.0}}px; left:{{place.points.1}}px;', title='{{ place.place_name }}'></div>
+                            {% endfor %}
+                            
+
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="graph_box">
+                        <div class="graph_area">
+                            <img src="{{ object.graph_img.url }}" />
+                        </div>
+                    </div>
+
+                    <div class="placelist_box">
+                        <div class="placelist_title">
+                            <p style='margin-top: 0%; font-weight: bold; font-size: 21px;'>
+                                >> [관광지 List]
+                            </p>
+                        </div>
+
+                        <div class="placelist_area" id='box_style_deep'>
+                            <ul class = 'ul_style'>
+                                <!-- DJANGO FOR문도 가능 -->
+                                {% for place in object.place_set.all %}
+                                <li><a href='{{ place.get_absolute_url }}' style='text-decoration: none;' class='ul_style'> {{ place.place_name }} </a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="keyword_box">
+                        <div class="good_top_area" style='color: white;'>
+                            <div class="top_box"id = "box_style_deep">
+                                <span class="top_title">
+                                    긍정리뷰 TOP 3 관광지
+                                </span>
+                                <div class="top3">
+                                    <ol>
+                                        {% for good in object.good_list %}
+                                        <li>{{ good }}</li>
+                                        {% endfor %}
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bad_top_area">
+                            <div class="top_box" id='box_style_light'>
+                                <span class="top_title" >
+                                     부정리뷰 TOP 3 관광지 
+                                </span>
+                                <div class="top3">
+                                    <ol>
+                                        {% for bad in object.bad_list %}
+                                        <li>{{bad}}</li>
+                                        {% endfor %}
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    
+                    </div>
+                    {% endblock %}
+                    
+
+
