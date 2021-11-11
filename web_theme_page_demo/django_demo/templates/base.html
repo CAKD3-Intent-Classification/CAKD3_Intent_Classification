@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <link href='{% static "css/main.css"%}' rel="stylesheet" />
+        
+
+       <title>{% block title %}{% endblock %}</title>
+       {% block extra-style %}{% endblock %}
+
+        
+    </head>
+
+
+    <body style="font-family: NotoSansBold;">
+        <script>
+            window.onload = function() {
+            var input = document.getElementById("input_text");
+
+            // Execute a function when the user releases a key on the keyboard
+            input.addEventListener("keyup", function(event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("enter_btn").click();
+            }
+            });
+        
+            var div2 = document.getElementsByClassName("point_circle_sub");
+            function handleClick(event) {
+                console.log(event.target);
+  
+                console.log(event.target.classList);
+
+                if (event.target.classList[1] === "clicked") {
+                
+                } else {
+                for (var i = 0; i < div2.length; i++) {
+                    div2[i].classList.remove("clicked");
+                }
+
+                event.target.classList.add("clicked");
+                }
+      }
+
+      function init() {
+        for (var i = 0; i < div2.length; i++) {
+          div2[i].addEventListener("click", handleClick);
+        }
+      }
+
+      init();
+        }
+
+        function clicked() {
+            if (document.getElementById('input_text').value == '재미있게 다녀왔습니다. 케이블카도 좋아요.') {
+            document.getElementById('print').insertAdjacentHTML('beforeend', '<li>'+document.getElementById('input_text').value+'<br/>0.999917268753051%의 확률로 긍정입니다.<br/><br/></li>');
+            }
+            else if (document.getElementById('input_text').value == '돈만 많이 쓰고옴.. 추움')
+            {
+                document.getElementById('print').insertAdjacentHTML('beforeend', '<li>'+document.getElementById('input_text').value+'<br/>0.99964690208435%의 확률로 부정입니다.<br/><br/></li>');
+            }
+
+            else if (document.getElementById('input_text').value == '케이블카 오래걸리는것 빼고 좋습니다')
+            {
+                document.getElementById('print').insertAdjacentHTML('beforeend', '<li>'+document.getElementById('input_text').value+'<br/>0.999650359153747%의 확률로 중립입니다.<br/><br/></li>');
+            }
+
+            document.getElementById('input_text').value = '';
+        }
+        </script>
+
+        <div class="main_box">
+            <div class="sub_box" >
+                <div class="menubar_box">
+                     <div class="menu_box1">
+                        <div class="clickable_box" style='text-align: center;'>
+                            <a href='{% url "theme:theme_detail" 4 %}' style='text-decoration: none;'>명소</a>
+
+                        </div>
+                    </div>
+
+                    <div class="menu_box2">
+                        <div class="clickable_box" style="text-align: center;">
+                            <a href='{% url "theme:theme_detail" 3 %}' style='text-decoration: none;'>문화</a>
+
+                        </div>
+                    </div>
+
+                    <div class="menu_box3">
+                        <div class="clickable_box" style="text-align: center;">
+                            <a href='{% url "theme:theme_detail" 3 %}' style='text-decoration: none;'>쇼핑몰</a>
+
+                        </div>
+                    </div>
+
+                    <div class="menu_box4">
+                        <div class="clickable_box" style="text-align: center;">
+                            <a href='{% url "theme:theme_detail" 5 %}' style='text-decoration: none;'>시장</a>
+
+                        </div>
+                    </div>
+
+                    <div class="menu_box5">
+                        <div class="clickable_box" style="text-align:center;" >
+                            <a href='{% url "theme:theme_detail" 6 %}' style='text-decoration: none;'>역사</a>
+
+                        </div>
+                    </div>
+
+                    <div class="menu_box6">
+                        <div class="clickable_box" style="text-align: center;">
+                            <a href='{% url "theme:theme_detail" 3 %}' style='text-decoration: none;'>자연/여가</a>
+
+                        </div>
+                    </div>
+
+                    <div class="menu_box7">
+                        <div class="clickable_box" style='text-align: center;'>
+                            <a href='{% url "theme:theme_detail" 3 %}' style='text-decoration: none;'>전망대</a>
+
+                        </div>
+                    </div>  
+
+                    <div class="menu_box8">
+                        <div class="clickable_box" 
+                        style="text-align: center;">
+                            <a href='{% url "theme:theme_detail" 3 %}' style='text-decoration: none;'>테마파크</a>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content_box" > 
+                    {% block contents %}
+                    
+                    {% endblock %}
+                    <div class="bert_box">
+                        <div class="print_area">
+                            <div class="print_box" id='bert_box_style'>
+                                <ul id='print'>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class = 'bert_input_box'>
+                            <div class="bert_text_box">
+                                <div class="enter_btn">
+                                    <input type="button" value='ENTER' id='enter_btn' onclick="clicked()"/>
+                                </div>
+                                <div class="input_text" id='bert_box_style'>
+                                    <input type="text"  id="input_text" name='inputtext'/>
+                                
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+                
+            </div>
+        </div>
+    </body>
+</html>
+
+
